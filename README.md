@@ -1,4 +1,4 @@
-# MotoBike Registry
+# MotoBike Market / Registry
 Tools & Framework needed.
 Metamask-wallet
 Truffle framework
