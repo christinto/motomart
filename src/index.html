@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MotorMart</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body background="img.jpg">
+    
+    <div class="container" >
+      <div class="row" >
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Pete's Motorbike Mart</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div id="listedBikes" class="row">
+        <!-- Bikes LOAD HERE -->
+
+      </div>
+
+      <div id="petsRow" class="row">
+        <div class="col-sm-6 col-sm-push-3 col-md-8 col-md-push-2">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Motor Bike registration</h3>
+            </div>
+            <div class="panel-body" >
+              <h4>Register</h4>
+              <input type="text" class="form-control" id="vin" placeholder="Vehicle Id" />
+              <input type="text" class="form-control" id="year" placeholder="Year" />
+              <input type="text" class="form-control" id="model" placeholder="Model" />
+              <input type="text" class="form-control" id="make" placeholder="Make" />
+              <input type="text" class="form-control" id="capacity" placeholder="CC Capacity" />
+              <button class="btn btn-primary" id="submitButton" type="button">Submit</button>
+            </div>
+            <div class="panel-body">
+              <h4>Search Bike:</h4>
+              <strong>Owner</strong>: <span id="owneraddress"></span> <br/><br/>
+              <strong>VIN</strong>: <span id="vvin"></span> <br/><br/>
+              <strong>Make</strong>: <span id="vmake"></span> <br/><br/>
+              <strong>Model</strong>: <span id="vmodel"></span> <br/><br/>
+              <strong>Year</strong>: <span id="vyear"></span> <br/><br/>
+              <strong>Status</strong>: <span id="vstatus"></span> <br/><br/>
+              <strong>Capacity</strong>: <span id="vcapacity"></span> <br/><br/>
+              <strong>Price (ETH)</strong>: <span id="vprice"></span> <br/><br/>
+
+              <input type="text" class="form-control" id="vsvin" placeholder="Bike VIN" />
+              <button class="btn btn-primary" id="searchButton" type="button">Search</button>
+            </div>
+
+            <div class="panel-body">
+              <h4>Transfer Vehicle :</h4>
+
+              <input type="text" class="form-control" id="vtid" placeholder="Bike VIN Number" />
+              <input type="text" class="form-control" id="newOwnerAddress" placeholder="New Address" />
+
+              <button class="btn btn-primary" id="transferButton" type="button">Transfer</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="bikeTemplate" style="display: none;">
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="panel panel-default panel-pet">
+            <div class="panel-heading">
+              <h3 class="panel-title" id="descTitle">Motor Bike</h3><span class="badge badge-success owner-badge">Owner</span>
+            </div>
+            <div class="panel-body">
+              <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;" src="https://auto.ndtvimg.com/bike-images/colors/yamaha/yzf-r15s/yamaha-yzf-r15s-track-white.webp?v=9" data-holder-rendered="true">
+              <br/><br/>
+              <strong>VIN</strong>: <span class="vin"></span><br/>
+              <strong>Year</strong>: <span class="year"></span><br/><br/>
+              <strong>Capacity - CC</strong>: <span class="capacity"></span><br/><br/>
+              <strong>Status</strong>: <span class="status"></span><br/><br/>
+              <strong>price (ETH)</strong>: <span class="price"></span><br/><br/>
+              <div class="section">
+                Price: <input type="text" class="sellPrice"/>
+                <button class="btn btn-primary btn-sellVehicle" data-id="0" disabled>Sell bike</button>
+              </div>
+              <div class="section">
+                <button class="btn btn-primary btn-buyVehicle" data-id="0" data-price="0">Buy bike</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
