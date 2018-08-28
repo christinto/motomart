@@ -55,7 +55,9 @@ Ability to search information about any motorbike by inputting the VIN identific
 
     - ganache-cli --noVMErrorsOnRPCResponse
 
-2. Connect metamask to ganache-cli
+2. Truffle compile & Truffle migrate
+
+3. Connect metamask to ganache-cli
 
     Metamask should be connected to the local ganache-cli environment on port 8545.
     
@@ -63,8 +65,8 @@ Ability to search information about any motorbike by inputting the VIN identific
     
     Metamask will inject the account into the app
 
-3. Start lite-server by invoking npm run dev
+4. Start lite-server by invoking npm run dev
 
     lite-server is setup in bs-config.json to serve the files required. 
     
-4. Browse to URL - localhost:3000 to run app
+5. Browse to URL - localhost:3000 to run app
