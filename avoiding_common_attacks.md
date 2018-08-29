@@ -9,7 +9,23 @@
 * transferBike has to be in RoadWorthy state and not in ForSale state as another user could be trying to buy a bike 
 
 
-    `  function transferBike(uint _vin, address _newOwner) bikeOwnerOnly(motorbikeMap[_vin].owner) roadWorthy(_vin) stopInEmergency public returns (string) {
+        
+        '
+        // Check car is set as for Sale by owner
+        modifier forSale(uint _vin) {
+            require (motorbikeMap[_vin].status == Status.ForSale); _;
+        }
+    
+        modifier roadWorthy(uint _vin) {
+            require (motorbikeMap[_vin].status == Status.RoadWorthy); _;
+        }
+    
+        modifier bikeOwnerOnly(address _owner) {
+            require (msg.sender == _owner);
+            _;
+        }  
+    
+        function transferBike(uint _vin, address _newOwner) bikeOwnerOnly(motorbikeMap[_vin].owner) roadWorthy(_vin) stopInEmergency public returns (string) {
          emit TransferVehicle(_vin);
          motorbikeMap[_vin].owner = _newOwner;
          motorbikeMap[_vin].status = Status.RoadWorthy;
