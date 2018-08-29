@@ -51,20 +51,32 @@ Ability to search information about any motorbike by inputting the VIN identific
 
     ganache-cli test blockchain on port 8545
 
-    - ganache-cli --noVMErrorsOnRPCResponse
+    `ganache-cli --noVMErrorsOnRPCResponse`
 
-2. Truffle compile & Truffle migrate
+2. Truffle Compile and Migrate
+
+    `Truffle compile`
+    
+    `Truffle migrate`
+    
+3. Install dependencies
+
+    `npm install`
 
 3. Connect metamask to ganache-cli
 
-    Metamask should be connected to the local ganache-cli environment on port 8545.
+    * Metamask should be connected to the local ganache-cli environment on port 8545.
     
-    Select Private Network - localhost:8545 
+    * Select Private Network - localhost:8545 
     
-    Metamask will inject the account into the app
+    * Metamask will inject the account into the app
 
-4. Start lite-server by invoking npm run dev
+4. Start lite-server
+    * lite-server is setup in bs-config.json to serve the files required. 
 
-    lite-server is setup in bs-config.json to serve the files required. 
+     `npm run dev`
+
     
-5. Browse to URL - localhost:3000 to run app
+5. Browse to URL in browser
+
+    `localhost:3000`

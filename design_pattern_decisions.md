@@ -8,12 +8,12 @@ Also withdrawal of ETHER from the contract is only allowed when owner stops the 
 
 The modifiers onlyInEmergency and stopInEmergency allows the motorMart contract to ensure that functions like buyBike are stopped if theres an emergency and no ether is being sent to the contract. 
 
-` function buyBike(uint vin) public stopInEmergency forSale(vin) paidEnough(motorbikeMap[vin].price) checkValue(vin) payable {...}
-`
+    ` function buyBike(uint vin) public stopInEmergency forSale(vin) paidEnough(motorbikeMap[vin].price) checkValue(vin) payable {...}
+    `
 
 Whole contract 
 
-`contract CircuitBreaker is Owned {
+    `  contract CircuitBreaker is Owned {
  
      bool public stopped = false;
  
@@ -43,7 +43,8 @@ Whole contract
   Important features such as transferVehicle, buy and sell have modifiers that check for conditions are met and if not will throw error if the required conditions are not met. 
   
   Only the bike Owner can list the bike for sale and it will check first before updating the status on the bike.
-    `  modifier forSale(uint _vin) {
+     
+     `  modifier forSale(uint _vin) {
              require (motorbikeMap[_vin].status == Status.ForSale); _;
          }
      
@@ -70,7 +71,7 @@ Another pattern implemented is only the owner of the contract is able to withdra
 
 Only the owner of the contract can withdraw the ETHER that is held on the contract and when we transfer the ownership of the contract, we have to specify the allowed address to claim ownership and then the new owner will be able to call **acceptOwnership()** with their account that mathces the address of the newOwner.
 
-`contract Owned {
+    `contract Owned {
      address public owner;
      address public newOwner;
  
