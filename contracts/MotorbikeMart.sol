@@ -170,7 +170,7 @@ contract MotorbikeMart is Owned, CircuitBreaker {
         motorbikeMap[vin].owner = msg.sender;
 
         // send ether to "owner"
-        // Take a 1% fee out of the price
+        // Take a 5% fee out of the price
         uint fee = (motorbikeMap[vin].price).mul(SALE_FEE_PERCENT) / 100;
 
         emit Fee(fee);
