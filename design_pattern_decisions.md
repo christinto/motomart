@@ -98,4 +98,7 @@ Only the owner of the contract can withdraw the ETHER that is held on the contra
      }
  }`
  
+ ### Withdrawal design pattern
+ 
+ * Owner can only withdraw the contract balance after the contract has been stopped and only the contract owner will get the withdrawal of the contract balance. 
  
