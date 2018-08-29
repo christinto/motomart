@@ -34,18 +34,16 @@ Select the address you want to use from metamask when interacting with the motor
 1. Submit new vehicle 
 2. Owner can set a sell Price in ETH and press sell to list the item up as For Sale.
 
-3. Search car details up via VIN
+3. Search vehicle details up via VIN
 4. User can do a on-chain transfer of their motorbike to another Address on the blockchain so that they become the new owner. 
 5. Switch accounts on Metamask and reload the app
 
-6. Ability to buy a motorbike that is listed and ownd by another address. 
+6. Ability to buy a motorbike that is listed and owned by another address. 
 7. Takes ETHER as payment and if enough is paid, transfers the ownership over to the buyer.
 
 # Search function
 
 Ability to search information about any motorbike by inputting the VIN identification number 
-
-#
  
 # How to Setup
 
